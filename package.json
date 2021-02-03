@@ -1,0 +1,14 @@
+{
+  "name": "survey123-webhook-provider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "extract-submission-info.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^6.8.0"
+  }
+}

@@ -1,5 +1,3 @@
-const processSurveyResponse = submissionInfo => {
+export const processSurveyResponse = submissionInfo => {
   console.log(submissionInfo);
 }
-
-module.exports = processSurveyResponse;

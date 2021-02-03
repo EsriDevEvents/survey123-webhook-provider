@@ -1,7 +1,7 @@
-const extractSubmissionInfo = require('./extract-submission-info');
-const processSurveyResponse = require('./process-survey-response');
+import { extractSubmissionInfo } from './extract-submission-info';
+import { processSurveyResponse } from './process-survey-response';
 
-module.exports.webhook = async (event) => {
+export async function webhook (event) {
   const body = JSON.parse(event.body);
   const submissionInfo = extractSubmissionInfo(body);
   await processSurveyResponse(submissionInfo);

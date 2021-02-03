@@ -40,5 +40,7 @@ functions:
           path: webhook
           method: post
           cors: true
+
 plugins:
   - serverless-offline
+  - serverless-webpack

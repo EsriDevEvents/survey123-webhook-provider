@@ -1,4 +1,4 @@
-const extractSubmissionInfo = surveyResponse => {
+export const extractSubmissionInfo = surveyResponse => {
   return {
     username: surveyResponse.userInfo.username,
     firstName: surveyResponse.userInfo.firstName,
@@ -8,5 +8,3 @@ const extractSubmissionInfo = surveyResponse => {
       .attributes['what_industry_do_you_work_in']
   };
 };
-
-module.exports = extractSubmissionInfo

@@ -27,11 +27,18 @@ provider:
   lambdaHashingVersion: 20201221
   region: us-west-2
 
+custom:
+  allowedOrigin: '*'
+
 functions:
   webhook:
     handler: handler.webhook
+    environment:
+      ALLOWED_ORIGIN: ${self:custom.allowedOrigin}
     events:
       - http:
           path: webhook
           method: post
           cors: true
+plugins:
+  - serverless-offline

@@ -13,5 +13,9 @@
     "serverless-webpack": "^5.3.5",
     "webpack": "^5.20.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@esri/arcgis-rest-portal": "^3.0.0",
+    "@esri/arcgis-rest-request": "^3.0.0",
+    "cross-fetch": "^3.0.6"
+  }
 }

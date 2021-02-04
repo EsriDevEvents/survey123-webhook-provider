@@ -10,9 +10,6 @@ Feel free to clone this project and adapt the code logic to fit your needs.
 Clone the repository
 ```
 git clone
-```
-Change current directory
-```
 cd survey123-webhook-provider
 ```
 Install dependencies
@@ -22,6 +19,15 @@ npm i
 Install Serverless
 ```
 npm i -g serverless
+```
+Rename `.env-example` to `.env`
+```
+mv .env-example .env
+```
+Add the credentials for the ArcGIS Online user you want the service to act on behalf of.
+```
+AGO_USERNAME=<your username>
+AGO_PASSWORD=<your password>
 ```
 
 ### Local Development
@@ -39,3 +45,10 @@ Deploy to your cloud
 ```
 serverless deploy
 ```
+
+## Security Notes
+As configured, the ArcGIS Online credentials will be supplied to your AWS Lambda function as environment variables. This means that anyone who has access to that Lambda function's configuration **will be able to see the password.**
+
+We recommend creating a new AGO user for this service that has the minimum permissions possible to perform the tasks you set up.
+
+If you need more security than that, look into AWS KMS.

@@ -28,7 +28,7 @@ provider:
   region: us-west-2
 
 custom:
-  allowedOrigin: '*'
+  allowedOrigin: 'https://survey123.arcgis.com'
 
 functions:
   webhook:
@@ -41,8 +41,8 @@ functions:
       - http:
           path: webhook
           method: post
-          cors: true
-
+          cors:
+            origin: ${self:custom.allowedOrigin}
 plugins:
   - serverless-offline
   - serverless-webpack

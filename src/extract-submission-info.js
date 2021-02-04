@@ -2,7 +2,7 @@
  * This function extracts and formats the information we want
  * from the Survey123 response body.
  */
-export const extractSubmissionInfo = surveyResponse => {
+export function extractSubmissionInfo (surveyResponse) {
   return {
     username: surveyResponse.userInfo.username,
     firstName: surveyResponse.userInfo.firstName,

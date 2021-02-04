@@ -1,3 +1,7 @@
+/**
+ * This function extracts and formats the information we want
+ * from the Survey123 response body.
+ */
 export const extractSubmissionInfo = surveyResponse => {
   return {
     username: surveyResponse.userInfo.username,
@@ -5,6 +9,6 @@ export const extractSubmissionInfo = surveyResponse => {
     industry: surveyResponse
       .applyEdits[0]
       .adds[0]
-      .attributes['what_industry_do_you_work_in']
+      .attributes['what_industry_do_you_work_in'].toLowerCase()
   };
 };

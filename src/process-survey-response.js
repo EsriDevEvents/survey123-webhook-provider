@@ -8,7 +8,7 @@ import 'cross-fetch/polyfill';
 import 'isomorphic-form-data';
 
 // Import arcgis-rest-js routines
-import { addGroupUsers } from "@esri/arcgis-rest-portal";
+import { addGroupUsers, createGroupNotification } from "@esri/arcgis-rest-portal";
 import { UserSession } from "@esri/arcgis-rest-auth";
 
 // Create an authentication object from the environment variables
@@ -27,15 +27,21 @@ const groupsMap = {
 
 export async function processSurveyResponse(submissionInfo) {
   // Add user to appropriate group
-  const groupToAddTo = groupsMap[submissionInfo.industry];
+  const subjectGroupId = groupsMap[submissionInfo.industry];
   const addRes = await addGroupUsers({
-    id: groupToAddTo,
+    id: subjectGroupId,
     users: [submissionInfo.username],
     authentication: session
   });
 
   // If no error, send a notification
   if (!addRes.errors) {
-
+    await createGroupNotification({
+      id: subjectGroupId,
+      users: [submissionInfo.username],
+      subject: 'You\'ve Unlocked Some Content!',
+      message: `Welcome, ${submissionInfo.firstName}.`,
+      authentication: session
+    });
   }
 }

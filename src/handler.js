@@ -1,6 +1,7 @@
 import { extractSubmissionInfo } from './extract-submission-info';
 import { processSurveyResponse } from './process-survey-response';
 
+// This "event" parameter comes from AWS API Gateway
 export async function webhook (event) {
   const body = JSON.parse(event.body);
   const submissionInfo = extractSubmissionInfo(body);

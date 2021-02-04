@@ -4,7 +4,7 @@ This project is a small NodeJS service that integrates with Survey123 as a webho
 
 This particular example puts respondants into a specific ArcGIS Online group based on the industry they work in, and sends them a custom email confirmation.
 
-Feel free to clone this project and adapt the code logic to fit your needs.
+Feel free to clone this project and adapt the code to fit your needs.
 
 ## Getting Started
 Clone the repository

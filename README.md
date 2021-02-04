@@ -9,7 +9,7 @@ Feel free to clone this project and adapt the code to fit your needs.
 ## Getting Started
 Clone the repository
 ```
-git clone
+git clone https://github.com/andrewctate/survey123-webhook-provider
 cd survey123-webhook-provider
 ```
 Install dependencies

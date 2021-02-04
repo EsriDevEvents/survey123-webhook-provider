@@ -32,7 +32,7 @@ custom:
 
 functions:
   webhook:
-    handler: handler.webhook
+    handler: src/handler.webhook
     environment:
       ALLOWED_ORIGIN: ${self:custom.allowedOrigin}
     events:

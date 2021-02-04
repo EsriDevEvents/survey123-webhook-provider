@@ -35,6 +35,8 @@ functions:
     handler: src/handler.webhook
     environment:
       ALLOWED_ORIGIN: ${self:custom.allowedOrigin}
+      AGO_USERNAME: ${env:AGO_USERNAME}
+      AGO_PASSWORD: ${env:AGO_PASSWORD}
     events:
       - http:
           path: webhook

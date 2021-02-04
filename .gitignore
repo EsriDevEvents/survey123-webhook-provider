@@ -1,5 +1,6 @@
 .serverless
 .env
 .webpack
+.DS_Store
 node_modules
 dist

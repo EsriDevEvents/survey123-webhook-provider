@@ -17,6 +17,7 @@
     "@esri/arcgis-rest-auth": "^3.0.0",
     "@esri/arcgis-rest-portal": "^3.0.0",
     "@esri/arcgis-rest-request": "^3.0.0",
-    "cross-fetch": "^3.0.6"
+    "cross-fetch": "^3.0.6",
+    "isomorphic-form-data": "^2.0.0"
   }
 }

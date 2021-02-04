@@ -3,11 +3,15 @@
  * when we receive a survey response in this module.
  */
 
-import 'cross-fetch';
+// Import polyfills that arcgis-rest-js requires in order to work
+import 'cross-fetch/polyfill';
+import 'isomorphic-form-data';
+
+// Import arcgis-rest-js routines
 import { addGroupUsers } from "@esri/arcgis-rest-portal";
 import { UserSession } from "@esri/arcgis-rest-auth";
 
-// Create an authentication object
+// Create an authentication object from the environment variables
 const session = new UserSession({
   username: process.env.AGO_USERNAME,
   password: process.env.AGO_PASSWORD
@@ -22,9 +26,16 @@ const groupsMap = {
 }
 
 export async function processSurveyResponse(submissionInfo) {
-  await addGroupUsers({
-    id: groupsMap[submissionInfo.industry],
+  // Add user to appropriate group
+  const groupToAddTo = groupsMap[submissionInfo.industry];
+  const addRes = await addGroupUsers({
+    id: groupToAddTo,
     users: [submissionInfo.username],
     authentication: session
   });
+
+  // If no error, send a notification
+  if (!addRes.errors) {
+
+  }
 }

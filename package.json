@@ -1,13 +1,13 @@
 {
   "name": "survey123-webhook-provider",
   "version": "1.0.0",
-  "description": "",
-  "main": "extract-submission-info.js",
+  "description": "A small NodeJS service that integrates with Survey123 as a webhook to perform various automated tasks when a survey has been completed or edited.",
+  "main": "src/handler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Andrew Tate <atate@esri.com>",
+  "license": "MIT",
   "devDependencies": {
     "serverless-offline": "^6.8.0",
     "serverless-webpack": "^5.3.5",

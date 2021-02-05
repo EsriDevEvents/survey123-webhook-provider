@@ -45,15 +45,13 @@ export async function processSurveyResponse(submissionInfo) {
 
   // If no error, remove them from welcome group and send a notification
   if (!addRes.errors) {
-    const removeRes = await removeGroupUsers({
+    await removeGroupUsers({
       id: welcomeGroupId,
       users: [submissionInfo.username],
       // the welcome group is in the community org, so we need to use
       // the community org authentication object
       authentication: communitySession
     });
-
-    console.log(JSON.stringify(removeRes))
 
     await createGroupNotification({
       id: subjectGroupId,

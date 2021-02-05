@@ -37,6 +37,8 @@ functions:
       ALLOWED_ORIGIN: ${self:custom.allowedOrigin}
       AGO_USERNAME: ${env:AGO_USERNAME}
       AGO_PASSWORD: ${env:AGO_PASSWORD}
+      AGO_COMMUNITY_USERNAME: ${env:AGO_COMMUNITY_USERNAME}
+      AGO_COMMUNITY_PASSWORD: ${env:AGO_COMMUNITY_PASSWORD}
     events:
       - http:
           path: webhook

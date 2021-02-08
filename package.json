@@ -18,6 +18,8 @@
     "@esri/arcgis-rest-portal": "^3.0.0",
     "@esri/arcgis-rest-request": "^3.0.0",
     "cross-fetch": "^3.0.6",
+    "handlebars": "^4.7.6",
+    "handlebars-loader": "^1.7.1",
     "isomorphic-form-data": "^2.0.0"
   }
 }

@@ -5,7 +5,11 @@ module.exports = {
   entry: slsw.lib.entries,
   target: 'node',
   mode: 'production',
-  module: {},
+  module: {
+		rules: [
+      { test: /\.hbs$/, loader: 'handlebars-loader' }
+    ]
+	},
   output: {
     libraryTarget: 'commonjs',
     path: path.join(__dirname, '.webpack'),

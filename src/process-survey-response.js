@@ -11,6 +11,9 @@ import 'isomorphic-form-data';
 import { addGroupUsers, createGroupNotification, removeGroupUsers } from "@esri/arcgis-rest-portal";
 import { UserSession } from "@esri/arcgis-rest-auth";
 
+// Import our message template
+import * as generateMessage from './message-template.hbs';
+
 // Create an authentication object from the environment variables
 const session = new UserSession({
   username: process.env.AGO_USERNAME,
@@ -53,11 +56,16 @@ export async function processSurveyResponse(submissionInfo) {
       authentication: communitySession
     });
 
+    const message = generateMessage({
+      firstName: submissionInfo.firstName,
+      industry: submissionInfo.industry
+    });
+
     await createGroupNotification({
       id: subjectGroupId,
       users: [submissionInfo.username],
       subject: 'You\'ve Unlocked Some Content!',
-      message: `Welcome, ${submissionInfo.firstName}.`,
+      message,
       authentication: session
     });
   }

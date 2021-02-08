@@ -2,7 +2,11 @@
 ## Overview
 This project is a small NodeJS service that integrates with Survey123 as a webhook to perform various automated tasks when a survey has been completed or edited.
 
-This particular example puts respondants into a specific ArcGIS Online group based on the industry they work in, and sends them a custom email confirmation.
+This particular example moves the survey respondant from one ArcGIS Online group to another based on the industry they work in. We use this mechanism to hide the survey and instead bring material to the forefront of our Hub site that is personalized and relevant for the respondant.
+
+In addition, this example sends the respondant a custom email notification.
+
+To do all this, the script acts on behalf of two ArcGIS Online users, one from a Hub Premium employee organization, and one from the Hub's community organization.
 
 Feel free to clone this project and adapt the code to fit your needs.
 
@@ -24,10 +28,12 @@ Rename `.env-example` to `.env`
 ```
 mv .env-example .env
 ```
-Add the credentials for the ArcGIS Online user you want the service to act on behalf of.
+Add the credentials for the ArcGIS Online user(s) you want the service to act on behalf of.
 ```
 AGO_USERNAME=<your username>
 AGO_PASSWORD=<your password>
+AGO_COMMUNITY_USERNAME=<your community username>
+AGO_COMMUNITY_PASSWORD=<your community password>
 ```
 
 ### Local Development

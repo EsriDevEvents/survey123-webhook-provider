@@ -1,0 +1,70 @@
+{
+  "applyEdits": [
+    {
+      "id": 0,
+      "adds": [
+        {
+          "attributes": {
+            "what_industry_do_you_work_in": "Science",
+            "globalid": "{B3863DFC-3E46-4A7B-8366-7B7D0BA85C0D}"
+          },
+          "geometry": { "spatialReference": { "wkid": 4326 }, "x": 0, "y": 0 }
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "id": 0,
+      "addResults": [
+        {
+          "objectId": 11,
+          "uniqueId": 11,
+          "globalId": "{B3863DFC-3E46-4A7B-8366-7B7D0BA85C0D}",
+          "success": true
+        }
+      ]
+    }
+  ],
+  "feature": {
+    "attributes": {
+      "what_industry_do_you_work_in": "Technology",
+      "globalid": "{B3863DFC-3E46-4A7B-8366-7B7D0BA85C0D}",
+      "objectid": 11
+    },
+    "geometry": null,
+    "layerInfo": {
+      "id": 0,
+      "name": "survey",
+      "type": "Feature Layer",
+      "globalIdField": "globalid",
+      "objectIdField": "objectid",
+      "relationships": []
+    },
+    "result": {
+      "globalId": "{B3863DFC-3E46-4A7B-8366-7B7D0BA85C0D}",
+      "objectId": 11,
+      "uniqueId": 11,
+      "success": true
+    },
+    "attachments": null
+  },
+  "eventType": "addData",
+  "portalInfo": {
+    "url": "https://www.arcgis.com",
+    "token": "w0aSFBKlzqD9akvqKQ9b2PkcSl_94Gmkow9O7PJcD8zsdRTUFG4fkbwAawfNs1Yua5pWrtorXSKsrkyqfqN9rg_iQ3LN96xWM7umZRWvZ5XF5qQXkxpDrKX05CFnL4De_ksoZtoDmpnJykbAhg3Kv9H_dw3lHhU9uV3OxopUUrE5G2bV0rzE9LDYY8xzHOKreitMqtcEOYt9qnMGwP6q2k9bOK4afR4g."
+  },
+  "userInfo": {
+    "username": "atate_cityx",
+    "firstName": "Andrew",
+    "lastName": "Tate",
+    "fullName": "Andrew Tate",
+    "email": "atate@esri.com"
+  },
+  "surveyInfo": {
+    "formItemId": "9300861aa41049b9bf28897ba2f48796",
+    "formTitle": "Welcome Survey",
+    "serviceItemId": "e2550f19c1c34f5d988080b214c47c02",
+    "serviceUrl": "https://services7.arcgis.com/BBpPn9wZu2D6eTNY/arcgis/rest/services/survey123_9300861aa41049b9bf28897ba2f48796_fieldworker/FeatureServer"
+  }
+}

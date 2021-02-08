@@ -1,12 +1,12 @@
+{{!-- AGO puts limits on what HTML we can send in a notification for security reasons, but lists and basic text structure tags are generally okay.. --}}
 <h2>Welcome to DataPoint Access!</h2>
 <p>Hello {{firstName}},</p>
 <p>We're thrilled you're here, especially since you work in {{industry}}. We've given you access to data we think will be helpful to you in your work. Feel free to use our data to:</p>
-{{!-- AGO puts limits on what HTML we can send in a notification, but lists and links are generally fine. --}}
 <ul>
   <li>Run analysis</li>
   <li>Gain insights</li>
   <li>Improve the world</li>
 </ul>
 
-{{!-- CAREFUL... AGO won't allow you to send a URL in a notification that you haven't yet added to your allow-list --}}
-<p>Click here to begin!</p>
+{{!-- CAREFUL... AGO won't allow you to send a URL in a notification that you haven't yet added to your org's allow-list  --}}
+<p>Click <a href="https://hub.hikes.dev">here</a> to begin!</p>
